@@ -1,0 +1,465 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    max-width: 95%;
+    margin: auto;
+}
+
+/* Apply some basic styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the content stretches to at least the height of the viewport */
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #bbb4b4;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoo {
+    width: 75px;
+    height: auto;
+}
+.lgo {
+    width: 225px;
+    height: auto;
+}
+
+.search {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.account a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #3f3d3d9a;
+    color: #ce46ff;
+    text-align: center; /* Center align the contents horizontally */
+    padding: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Add this line to center-align the menu links */
+}
+
+.show-mobile-menu {
+    display: block !important; /* Show the menu when the class is applied */
+    max-height: 500px; /* Set a maximum height for the animation */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.nav-links li {
+    margin: 10px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #800080; /* Underline effect on hover */
+}
+/* Mobile navigation button styles */
+.mobile-nav-button {
+    display: none; /* Hide the button by default on larger screens */
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Show the button on smaller screens using media query */
+@media screen and (max-width: 768px) {
+    .mobile-nav-button {
+        display: block; /* Show the button on smaller screens */
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the desktop menu on mobile screens */
+    }
+}
+
+
+
+/*Slider CSS || Add styles for the slider container */
+.slider {
+    max-width: 1458px; /* Adjust the max width to your preferred size */
+    margin: 20px auto; /* Add top and bottom margin for padding */
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.slider-frame {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slider-image {
+    flex: 0 0 auto;
+    width: 100%; /* Set the image width to 100% of the slider container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*Centerd Elemetns || Style the new section */
+.centered-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the H3 element */
+.enjoy-text {
+    color: black;
+    transition: color 0.3s; /* Add color transition on hover */
+}
+
+.enjoy-text:hover {
+    color: lightpurple; /* Change to the desired light purple color */
+}
+
+/* Style the H4 elements */
+.red-text {
+    color: white;
+    margin-top: 10px; /* Add spacing between elements */
+}
+
+.purple-text {
+    color: purple;
+    margin-top: 10px; /* Add spacing between elements */
+}
+
+/* Style the link within the H4 element */
+.purple-text a {
+    text-decoration: underline gray;
+    color: purple;
+    transition: color 0.3s; /* Add color transition on hover */
+}
+
+.purple-text a:hover {
+    color: rgb(248, 32, 248); /* Change to the desired light purple color */
+}
+
+/* Style for Best Sellers || Centered section styles */
+.best-sellers {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Heading styles */
+.best-sellers-heading {
+    color: black;
+    text-decoration: underline purple;
+}
+
+/* Product container styles */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Product box styles */
+.product {
+    width: calc(20% - 20px);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: solid purple 2px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.product-name, .product-price {
+    padding: 5px 10px; /* Add some padding to create the box */
+    background-color: #00AFEF; /* Set the background color to purple */
+    color: white; /* Set text color to white */
+    border: 2px solid purple; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    display: inline-block; /* Make it an inline-block to wrap around the content */
+    transition: background-color 0.4s; /* Add a smooth transition for the background color */
+    cursor: pointer;
+}
+/* Remove the background color on hover */
+.product:hover .product-name,
+.product:hover .product-price {
+    background-color: transparent;
+}
+.choice-box p{
+    padding: 5px 10px; /* Add some padding to create the box */
+    background-color: #00AFEF; /* Set the background color to purple */
+    color: white; /* Set text color to white */
+    border: 2px solid purple; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    display: inline-block; /* Make it an inline-block to wrap around the content */
+    transition: background-color 0.4s; /* Add a smooth transition for the background color */
+    cursor: pointer;
+}
+.choice-box p:hover{
+    background-color: transparent;
+}
+.large-box p {
+    padding: 5px 10px; /* Add some padding to create the box */
+    background-color: #00AFEF; /* Set the background color to purple */
+    color: black; /* Set text color to white */
+    border: 2px solid purple; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    display: inline-block; /* Make it an inline-block to wrap around the content */
+    transition: background-color 0.4s; /* Add a smooth transition for the background color */
+    cursor: pointer;
+}
+
+.large-box p:hover{
+    background-color: transparent;
+}
+
+.blurbg{
+    background-color: #bcd2dd;
+}
+
+/* Product image styles */
+.product-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    transform-origin: center center;
+}
+.product-image:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+/* Product name styles */
+.product-name {
+    font-weight: bold;
+    margin-top: 10px;
+    color:#000000;
+}
+
+/* Product price styles */
+.product-price {
+    color: #000000;
+    margin-top: 5px;
+}
+.product:last-child {
+    margin-right: 0;
+}
+
+/*Coices Section*/
+
+.choices-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the H4 element with a purple underline */
+.purple-text {
+    color: black;
+    text-decoration: underline purple;
+}
+
+/* Style the choice boxes */
+.choice-box {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top; /* Align boxes at the top */
+}
+
+/* Style the rectangle boxes */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    border: 2px solid purple;
+}
+
+/* Style the text below the boxes */
+.choice-box p {
+    color: black;
+    font-size: 16px;
+}
+
+/* Style the new launches section */
+.new-launches {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the h3 element with a purple underline */
+.new-launches h3 {
+    color: purple;
+    text-decoration: underline;
+}
+
+/* Style the square boxes */
+.square-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style the large square boxes */
+.large-box {
+    width: 290px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    margin: 50px; /* Add spacing between the boxes */
+    border: solid purple 2px;
+}
+
+/* Style the new banner section */
+.banner-section {
+    text-align: center;
+}
+
+.Banner {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto;
+}
+
+.banner-text:hover {
+    color: rgb(255, 119, 255); /* Change to the desired color on hover */
+}
+
+/* Center align the video container */
+
+.video-section {
+    text-align: center;
+}
+
+.video-container {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5%;
+    width: 100%;
+    height: 0;
+}
+.video-container iframe{
+    width: 100%;
+}
+
+
+
+/* International Link */
+
+.international-link{
+    background-color: #ce46ff;
+    text-align: center;
+    padding: 30px;
+}
+.international-link .inter-text:hover{
+    text-decoration: underline #fefe1e;
+}
+/*Footer Section*/
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 75px;
+    height: auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ce46ff;
+}
