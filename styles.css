@@ -9,6 +9,17 @@ body, h1, h2, p, ul {
     margin: auto;
 }
 
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for the animation */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position after the animation */
+}
+
+
 /* Apply some basic styling */
 body {
     font-family: Arial, sans-serif;
@@ -418,7 +429,6 @@ nav {
 .international-link .inter-text:hover{
     text-decoration: underline #fefe1e;
 }
-/*Footer Section*/
 
 /* Footer Styles */
 footer {
