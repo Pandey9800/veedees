@@ -57,7 +57,7 @@ header {
 }
 
 .search input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -70,9 +70,12 @@ header {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-left: 10px;
+    margin-left: 5px;
     cursor: pointer;
     font-size: 16px;
+}
+.account{
+    margin-right: 10px;
 }
 
 .account a {
@@ -121,12 +124,24 @@ nav {
     text-decoration: none;
     font-size: 16px;
     position: relative;
-    transition: border-bottom 0.3s;
+    transition: color 0.3s; /* Add a color transition on hover */
 }
 
-.nav-links a:hover {
-    border-bottom: 2px solid #800080; /* Underline effect on hover */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 2px; /* Set the height and style of the border */
+    background-color: #431b43;
+    transition: width 0.3s; /* Add a width transition on hover */
 }
+
+.nav-links a:hover::before {
+    width: 100%; /* Expand the width to 100% on hover */
+}
+
 /* Mobile navigation button styles */
 .mobile-nav-button {
     display: none; /* Hide the button by default on larger screens */
@@ -544,4 +559,79 @@ footer {
 
 .footer-links a:hover {
     color: #ce46ff;
+}
+
+/*Animation on the Page*/
+
+/* Define the animation for stars */
+@keyframes star-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* Create a class to style the stars */
+.star {
+    position: fixed;
+    top: -10px; /* Adjust this value to control where stars start */
+    left: 2%; /* Adjust this value to control the left position */
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: star-fall 6s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Style the stars */
+.star::before {
+    content: "\2605"; /* Unicode character for a star */
+    font-size: 20px;
+    color: #9735d8;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Define the animation for circles */
+@keyframes circle-rise {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100vh); /* Change to -100vh to reach the top */
+        opacity: 1;
+    }
+}
+
+
+/* Create a class to style the circles */
+.circle {
+    position: fixed;
+    top: 100%; /* Adjust this value to control where circles start */
+    right: 2%; /* Adjust this value to control the right position */
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00; /* Adjust the circle color as needed */
+    border-radius: 50%;
+    animation: circle-rise 6s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Change the color and size of the Font Awesome icons */
+.account a i {
+    color: #FF5733; /* Change to your desired color */
+    font-size: 24px; /* Change to your desired font size */
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.cart a i {
+    color: #337AFF; /* Change to your desired color */
+    font-size: 24px; /* Change to your desired font size */
+    margin-right: 5px; /* Add some space between the icon and text */
 }
