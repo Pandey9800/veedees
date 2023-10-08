@@ -5,8 +5,9 @@ body, h1, h2, p, ul {
 }
 
 .content{
-    max-width: 95%;
+    max-width: 92%;
     margin: auto;
+    background-color: #f3f0ed;
 }
 
 .scroll-fade-in {
@@ -135,18 +136,49 @@ nav {
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
-}
-
-/* Show the button on smaller screens using media query */
-@media screen and (max-width: 768px) {
-    .mobile-nav-button {
-        display: block; /* Show the button on smaller screens */
-    }
+    margin: 0 auto;
+    display: block;
+    text-align: center;
 }
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none; /* Hide the desktop menu on mobile screens */
     }
+}
+@media screen and (min-width: 768px) {
+    .mobile-nav-button {
+        display: none;
+    }
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Styles for changing the hamburger into an 'X' when clicked (for mobile navigation) */
+.mobile-nav-opened .hamburger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.mobile-nav-opened .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-nav-opened .hamburger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 
@@ -234,7 +266,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
 /* Product box styles */
@@ -264,6 +295,39 @@ nav {
 .product:hover .product-price {
     background-color: transparent;
 }
+/* Add color transition and animation to buttons with class "ATCB" */
+.ATCB {
+    background-color: transparent;
+    border: 2px solid purple;
+    color: purple;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add color transition */
+}
+
+/* Change button styles on hover */
+.ATCB:hover {
+    background-color: purple;
+    color: white;
+    transition: background-color 0.3s, color 0.3s; /* Add color transition on hover */
+    animation: buttonAnimation 0.5s; /* Add animation on hover */
+}
+
+/* Define a simple pulse animation for the button */
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .choice-box p{
     padding: 5px 10px; /* Add some padding to create the box */
     background-color: #00AFEF; /* Set the background color to purple */
@@ -375,20 +439,18 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 /* Style the large square boxes */
 .large-box {
-    width: 290px; /* Adjust the width as needed */
+    width: 200px; /* Adjust the width as needed */
     height: 200px; /* Adjust the height as needed */
     margin: 50px; /* Add spacing between the boxes */
-    border: solid purple 2px;
 }
 
 /* Style the new banner section */
 .banner-section {
-    text-align: center;
+    padding-top: 5%;
 }
 
 .Banner {
@@ -425,9 +487,18 @@ nav {
     background-color: #ce46ff;
     text-align: center;
     padding: 30px;
+    transition: background-color 0.4s, color 0.4s; /* Apply transition to background-color and color */
 }
-.international-link .inter-text:hover{
-    text-decoration: underline #fefe1e;
+.international-link .inter-text a{
+    text-decoration: none;
+    cursor: pointer;
+    color: yellow;
+}
+.international-link .inter-text a:hover{
+    text-decoration: underline #d8475f;
+    color: #620982ce;
+    transition: text-decoration 0.4s, color 0.4s; /* Apply transition to text-decoration and color on hover */
+
 }
 
 /* Footer Styles */

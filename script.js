@@ -88,6 +88,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileNavButton = document.getElementById("menu-button");
+    const navLinks = document.querySelector(".nav-links");
+
+    // Add an event listener to toggle the mobile navigation menu
+    mobileNavButton.addEventListener("click", function () {
+        navLinks.classList.toggle("show-mobile-menu");
+        mobileNavButton.classList.toggle("mobile-nav-opened");
+    });
+});
+
+
 
 
 
