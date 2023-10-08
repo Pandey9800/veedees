@@ -87,24 +87,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    const mobileNavButton = document.getElementById("menu-button");
+    const mobileNavButton = document.querySelector(".mobile-nav-button");
     const navLinks = document.querySelector(".nav-links");
 
-    // Add an event listener to toggle the mobile navigation menu
+    // Add an event listener to the mobile navigation button
     mobileNavButton.addEventListener("click", function () {
-        navLinks.classList.toggle("show-mobile-menu");
+        // Toggle a class to animate the mobile navigation button
         mobileNavButton.classList.toggle("mobile-nav-opened");
     });
 });
-
-
-
-
-
-
-
-
-
-

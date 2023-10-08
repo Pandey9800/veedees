@@ -1,5 +1,5 @@
-/* Reset some default styles */
-body, h1, h2, p, ul {
+ /* Reset some default styles */
+ body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
 }
@@ -180,6 +180,7 @@ nav {
 .mobile-nav-opened .hamburger-line:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
+
 
 
 
