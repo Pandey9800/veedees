@@ -466,9 +466,9 @@ nav {
 
 /* Style the large square boxes */
 .large-box {
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    margin: 50px; /* Add spacing between the boxes */
+    width: 25%; /* Adjust the width as needed */
+    height: 20%; /* Adjust the height as needed */
+    margin: 50px;
 }
 
 /* Style the new banner section */
