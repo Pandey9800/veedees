@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
  /* Reset some default styles */
  body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
+    font-family: monospace;
 }
 
 .content{
@@ -31,7 +33,7 @@ body {
 }
 
 header {
-    background-color: #bbb4b4;
+    background-color: #ab9eb4;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -75,15 +77,21 @@ header {
     font-size: 16px;
 }
 .account{
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.cart{
+    margin-left: 5px;
+}
+.cart a {
+    color: black;
+    text-decoration: none;
 }
 
 .account a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 16px;
-    border: 2px solid #fff;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
@@ -93,7 +101,7 @@ header {
 
 /* Navigation Menu Styles */
 nav {
-    background-color: #3f3d3d9a;
+    background-color: #5b3358;
     color: #ce46ff;
     text-align: center; /* Center align the contents horizontally */
     padding: 10px;
@@ -134,7 +142,7 @@ nav {
     bottom: 0;
     width: 0; /* Initially set the width to 0 */
     height: 2px; /* Set the height and style of the border */
-    background-color: #431b43;
+    background-color: #e7b248;
     transition: width 0.3s; /* Add a width transition on hover */
 }
 
@@ -429,7 +437,6 @@ nav {
     width: 200px;
     height: 200px;
     background-color: #333;
-    border: 2px solid purple;
 }
 
 /* Style the text below the boxes */
@@ -454,7 +461,7 @@ nav {
 .square-boxes {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* Style the large square boxes */
@@ -488,11 +495,11 @@ nav {
     display: inline-block;
     position: relative;
     padding-bottom: 5%;
-    width: 100%;
+    width: 99.6%;
     height: 0;
 }
 .video-container iframe{
-    width: 100%;
+    width: 99.8%;
 }
 
 
@@ -598,40 +605,120 @@ footer {
 }
 
 
-/* Define the animation for circles */
-@keyframes circle-rise {
-    0% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(-100vh); /* Change to -100vh to reach the top */
-        opacity: 1;
-    }
-}
-
-
-/* Create a class to style the circles */
-.circle {
-    position: fixed;
-    top: 100%; /* Adjust this value to control where circles start */
-    right: 2%; /* Adjust this value to control the right position */
-    width: 20px;
-    height: 20px;
-    background-color: #ffcc00; /* Adjust the circle color as needed */
-    border-radius: 50%;
-    animation: circle-rise 6s linear infinite; /* Adjust the animation duration as needed */
-}
 
 /* Change the color and size of the Font Awesome icons */
 .account a i {
-    color: #FF5733; /* Change to your desired color */
+    color: #000000; /* Change to your desired color */
     font-size: 24px; /* Change to your desired font size */
     margin-right: 5px; /* Add some space between the icon and text */
 }
 
 .cart a i {
-    color: #337AFF; /* Change to your desired color */
+    color: #000000; /* Change to your desired color */
     font-size: 24px; /* Change to your desired font size */
     margin-right: 5px; /* Add some space between the icon and text */
 }
+/* Add these styles for dark mode */
+.dark-mode {
+    background-color: #1e1e1e; /* Dark background color */
+    color: #fff;
+}
+/* Remove the white background from the dark-mode-toggle button */
+#dark-mode-toggle {
+    background-color: transparent;
+}
+
+
+
+/*Contact Us*/
+* {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+      "sans-serif";
+  }
+   
+  *:focus {
+    outline: 0;
+  }
+  
+  .wrapper {
+    margin: 100px auto 0;
+    width: 70%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  form {
+    width: 100%;
+    margin: 0;
+  }
+  
+  form * {
+    font-size: 20px;
+    letter-spacing: 0.075em;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 12px;
+    border: solid 1px #000000;
+  }
+  
+  form .field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #b13e8b, #372056);
+    width: 100%;
+    height: 64px;
+    transition: width 333ms ease-in-out;
+    text-align: center;
+    padding: 18px 0;
+  }
+  
+  form .field input[type="text"],
+  form .field textarea {
+    border: none;
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    padding-left: 19.5%;
+    color: #313a3d;
+  }
+  
+  form #msg {
+    height: 62px;
+    resize: none;
+    transition: all 333ms ease-in-out;
+    padding-top: 18px;
+  }
+  form textarea:focus#msg,
+  form textarea:not(:placeholder-shown)#msg {
+    height: 166px;
+  }
+  form input[type="text"]:focus + label,
+  form input[type="text"]:not(:placeholder-shown) + label,
+  form textarea:focus + label,
+  form textarea:not(:placeholder-shown) + label,
+  form .field:hover label {
+    width: 18%;
+  }
+  form input[type="submit"] {
+    background: linear-gradient(90deg, #b13e8b, #812d65);
+    border: none;
+    position: relative;
+    padding: 13px 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus {
+    background: #372056;  
+  }
+  

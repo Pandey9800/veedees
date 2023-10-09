@@ -97,3 +97,35 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileNavButton.classList.toggle("mobile-nav-opened");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+    const header = document.getElementById("site-header"); // Add this line
+
+    // Check the dark mode state in local storage or use a default value
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        body.classList.toggle("dark-mode");
+        header.classList.toggle("dark-header"); // Add this line
+        // Update the dark mode state in local storage
+        localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
+    }
+
+    // Initialize the dark mode based on the stored state
+    if (isDarkMode) {
+        body.classList.add("dark-mode");
+        header.classList.add("dark-header"); // Add this line
+    }
+
+    // Add a click event listener to the dark mode toggle button
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+});
+
+function addClass() {
+  document.body.classList.add("sent");
+}
+
+sendLetter.addEventListener("click", addClass);

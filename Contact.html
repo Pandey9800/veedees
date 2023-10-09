@@ -3,9 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Veedees - Contact Us</title>
 </head>
 <body>
+    <header id="site-header">
+        <div class="logo">
+            <img class="logoo" src="Logo.png" alt="Your Logo">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
+        <div class="account">
+            <a href="#"><i class="fa fa-user"></i>Profile</a>
+        </div>
+        <div class="cart">
+            <a href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+        </div>        
+    </header>
+
+    <nav>
+        <button class="mobile-nav-button" id="menu-button">
+            <div class="hamburger-icon">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </button>        
+        <ul class="nav-links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Hair Care</a></li>
+            <li><a href="#">Body Care</a></li>
+            <li><a href="#">Belly Oil</a></li>
+            <li><a href="#">Gifting</a></li>
+            <li><a href="#">Best Seller</a></li>
+            <li><a href="#">Offer</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <!-- <li><button id="dark-mode-toggle"><i class="fas fa-cog"></i></button></li> -->
+        </ul>
+    </nav>
     
+        <div class="wrapper">
+            <form action="#" method="post">
+              <div class="field">
+                <input type="text" id="name" name="name" placeholder="Who are you?" autofocus/>
+                <label for="name">Name</label>
+              </div>
+              <div class="field">
+                <input type="text" id="email" name="email" placeholder="name@domain.tld" />
+                <label for="email">E-Mail</label>
+              </div>
+              <div class="field">
+                <textarea id="msg" rows="4" name="msg" placeholder="You message..."></textarea>
+                <label for="msg">Your Message</label>
+              </div>
+              <input class="button" type="submit" value="Send" /><br><br>
+            </form>
+          
+          </div>    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="Logo.png" alt="Your Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>    
+    <div class="circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
