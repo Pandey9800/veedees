@@ -119,7 +119,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
-		// if ( 127 > Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+		if ( 127 > Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
 			add_theme_support( 'dark-editor-style' );
 		}
 
@@ -335,6 +335,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		// Remove feed icon link from legacy RSS widget.
 		add_filter( 'rss_widget_feed_link', '__return_empty_string' );
 	}
+}
 add_action( 'after_setup_theme', 'twenty_twenty_one_setup' );
 
 /**
@@ -522,34 +523,34 @@ function twenty_twenty_one_non_latin_languages() {
 add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_non_latin_languages' );
 
 // SVG Icons class.
-// require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.php';
+require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.php';
 
 // Custom color classes.
-// require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
-// new Twenty_Twenty_One_Custom_Colors();
+require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
+new Twenty_Twenty_One_Custom_Colors();
 
 // Enhance the theme by hooking into WordPress.
-// require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/inc/template-functions.php';
 
 // Menu functions and filters.
-// require get_template_directory() . '/inc/menu-functions.php';
+require get_template_directory() . '/inc/menu-functions.php';
 
 // Custom template tags for the theme.
-// require get_template_directory() . '/inc/tkemplate-tags.php';
+require get_template_directory() . '/inc/template-tags.php';
 
 // Customizer additions.
-// require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
-// new Twenty_Twenty_One_Customize();
+require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
+new Twenty_Twenty_One_Customize();
 
 // Block Patterns.
-// require get_template_directory() . '/inc/block-patterns.php';
+require get_template_directory() . '/inc/block-patterns.php';
 
 // Block Styles.
-// require get_template_directory() . '/inc/block-styles.php';
+require get_template_directory() . '/inc/block-styles.php';
 
 // Dark Mode.
-// require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
-// new Twenty_Twenty_One_Dark_Mode();
+require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
+new Twenty_Twenty_One_Dark_Mode();
 
 /**
  * Enqueues scripts for the customizer preview.
