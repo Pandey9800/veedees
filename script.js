@@ -54,12 +54,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileNavButton = document.querySelector(".mobile-nav-button");
     const navLinks = document.querySelector(".nav-links");
 
+    // Function to toggle the mobile menu
+    function toggleMobileMenu() {
+        navLinks.classList.toggle("show-mobile-menu");
+        mobileNavButton.classList.toggle("close-icon"); // Toggle the close icon class
+    }
+
     // Add an event listener to the mobile navigation button
     mobileNavButton.addEventListener("click", function () {
-        // Toggle a CSS class to show/hide the menu with animation
-        navLinks.classList.toggle("show-mobile-menu");
+        // Toggle the mobile menu and icon
+        toggleMobileMenu();
+    });
+
+    // Add an event listener for screen resize
+    window.addEventListener("resize", function () {
+        // Check the screen width
+        const screenWidth = window.innerWidth;
+
+        // Define a threshold (e.g., 768 pixels) for when to hide the mobile menu
+        const desktopThreshold = 768; // Adjust as needed
+
+        if (screenWidth >= desktopThreshold) {
+            // If the screen width is larger than the threshold, hide the mobile menu
+            navLinks.classList.remove("show-mobile-menu");
+            mobileNavButton.classList.remove("close-icon"); // Remove the close icon class
+        }
     });
 });
+
 
 /* Smooth Scrolling */
 
