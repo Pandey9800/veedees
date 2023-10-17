@@ -1,0 +1,607 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+ /* Reset some default styles */
+ body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+/* Apply styles to the section elements */
+section {
+  padding: 20px; /* Add some padding for spacing */
+  text-align: center;
+}
+
+/* Increase the size of the section titles */
+section h2 {
+  font-size: 36px; /* Increase the font size */
+  font-family: 'Helvetica Neue', sans-serif; /* Use a modern font */
+  color: #333; /* Set the text color */
+  margin: 10px 0; /* Add spacing */
+}
+
+/* Style the paragraph text inside the section */
+section p {
+  font-size: 18px; /* Increase the font size */
+  font-family: 'Roboto', sans-serif; /* Use another modern font */
+  color: #666; /* Set the text color */
+  margin: 10px 0; /* Add spacing */
+}
+
+/* Increase the size of the special section */
+.special-section {
+  padding: 60px; /* Increase padding for more space */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Style the section title */
+.special-section h2 {
+  font-size: 55px; /* Increase the font size for the title */
+  font-family: 'Montserrat', sans-serif; /* Apply a unique font */
+  color: #ff6600; /* Set a custom text color */
+}
+
+/* Style the paragraph text inside the special section */
+.special-section p {
+  font-size: 36px; /* Increase the font size for the content */
+  font-family: 'Raleway', sans-serif; /* Use another unique font */
+  color: #666; /* Set the text color */
+  margin: 20px 0; /* Add spacing */
+}
+
+/* Remove background color and border */
+.special-section {
+  background-color: transparent;
+  border: none;
+}
+
+/* Define the move animation for the left and right sides */
+.special-section h2, .special-section p {
+  transition: transform 0.3s ease;
+}
+
+/* Apply the animation to move text to the left when hovered on the left side */
+.special-section:hover .left-hover h2,
+.special-section:hover .left-hover p {
+  transform: translateX(-20px);
+}
+
+/* Apply the animation to move text to the right when hovered on the right side */
+.special-section:hover .right-hover h2,
+.special-section:hover .right-hover p {
+  transform: translateX(20px);
+}
+
+/* Cancel the animation when hovered in the middle 60% area */
+.special-section:hover .center-hover h2,
+.special-section:hover .center-hover p {
+  transform: translateX(0);
+}
+
+
+
+.blackt{
+    color: #000000;
+    font-weight: 700;
+}
+
+
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for the animation */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position after the animation */
+}   
+
+
+/* Apply some basic styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the content stretches to at least the height of the viewport */
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoo {
+    width: 145px;
+    height: auto;
+}
+.lgo {
+    width: 425px;
+    height: auto;
+}
+
+.search {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.search input {
+    width: 60%;
+    padding: 10px;
+    border: solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search input:focus{
+  border: white #ffff;
+}
+
+.search button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.account{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.cart{
+    margin-left: 5px;
+}
+.cart a {
+    color: black;
+    text-decoration: none;
+}
+
+.account a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation Menu Styles */
+nav {
+  text-align: center;
+  padding: 10px;
+}
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Add this line to center-align the menu links */
+}
+
+.show-mobile-menu {
+    display: block !important; /* Show the menu when the class is applied */
+    max-height: 500px; /* Set a maximum height for the animation */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+nav .nav-links li {
+  display: inline;
+  margin: 0 30px; /* Add spacing between links */
+}
+
+nav .nav-links a {
+  color: black; /* Set text color to black */
+  font-size: 18px; /* Increase font size */
+  text-decoration: none; /* Remove the default underline */
+  position: relative;
+  transition: color 0.3s, text-decoration 0.3s, box-shadow 0.3s; /* Add transitions */
+}
+
+nav .nav-links a:hover {
+  color: #ce46ff; /* Change color on hover */
+  text-decoration: underline; /* Add an underline on hover */
+  box-shadow: 0 2px 0 0 #ce46ff; /* Add a shadow on hover */
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 2px; /* Set the height and style of the border */
+    /* background-color: #e7b248; */
+    transition: width 0.3s; /* Add a width transition on hover */
+}
+
+.nav-links a:hover::before {
+    width: 100%; /* Expand the width to 100% on hover */
+}
+
+/* Mobile navigation button styles */
+.mobile-nav-button {
+    display: none; /* Hide the button by default on larger screens */
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the desktop menu on mobile screens */
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile-nav-button {
+        display: none;
+    }
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Styles for changing the hamburger into an 'X' when clicked (for mobile navigation) */
+.mobile-nav-opened .hamburger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.mobile-nav-opened .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-nav-opened .hamburger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+
+
+/*Slider CSS || Add styles for the slider container */
+.slider {
+    max-width: 1458px; /* Adjust the max width to your preferred size */
+    margin: 20px auto; /* Add top and bottom margin for padding */
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.slider-frame {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slider-image {
+    flex: 0 0 auto;
+    width: 100%; /* Set the image width to 100% of the slider container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*Centerd Elemetns || Style the new section */
+.centered-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the H3 element */
+.enjoy-text {
+    color: black;
+    transition: color 0.3s; /* Add color transition on hover */
+}
+
+.enjoy-text:hover {
+    color: lightpurple; /* Change to the desired light purple color */
+}
+
+/* Style the H4 elements */
+.red-text {
+    color: white;
+    margin-top: 10px; /* Add spacing between elements */
+}
+
+.purple-text {
+    color: purple;
+    margin-top: 10px; /* Add spacing between elements */
+}
+
+/* Style the link within the H4 element */
+.purple-text a {
+    text-decoration: underline gray;
+    color: purple;
+    transition: color 0.3s; /* Add color transition on hover */
+}
+
+.purple-text a:hover {
+    color: rgb(248, 32, 248); /* Change to the desired light purple color */
+}
+
+/* Style for Best Sellers || Centered section styles */
+.best-sellers {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Heading styles */
+.best-sellers-heading {
+    color: black;
+    text-decoration: underline purple;
+}
+
+/* Product container styles */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Product box styles */
+.product {
+    width: calc(20% - 20px);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: solid purple 2px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.product-name, .product-price {
+    padding: 5px 10px; /* Add some padding to create the box */
+    background-color: #00AFEF; /* Set the background color to purple */
+    color: white; /* Set text color to white */
+    border: 2px solid purple; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    display: inline-block; /* Make it an inline-block to wrap around the content */
+    transition: background-color 0.4s; /* Add a smooth transition for the background color */
+    cursor: pointer;
+}
+/* Remove the background color on hover */
+.product:hover .product-name,
+.product:hover .product-price {
+    background-color: transparent;
+}
+/* Add color transition and animation to buttons with class "ATCB" */
+.ATCB {
+    background-color: transparent;
+    border: 2px solid purple;
+    color: purple;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add color transition */
+}
+
+/* Change button styles on hover */
+.ATCB:hover {
+    background-color: purple;
+    color: white;
+    transition: background-color 0.3s, color 0.3s; /* Add color transition on hover */
+    animation: buttonAnimation 0.5s; /* Add animation on hover */
+}
+
+/* Define a simple pulse animation for the button */
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.choice-box p{
+    padding: 5px 10px; /* Add some padding to create the box */
+    background-color: #00AFEF; /* Set the background color to purple */
+    color: white; /* Set text color to white */
+    border: 2px solid purple; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    display: inline-block; /* Make it an inline-block to wrap around the content */
+    transition: background-color 0.4s; /* Add a smooth transition for the background color */
+    cursor: pointer;
+}
+.choice-box p:hover{
+    background-color: transparent;
+}
+.large-box p {
+    padding: 5px 10px; /* Add some padding to create the box */
+    background-color: #00AFEF; /* Set the background color to purple */
+    color: black; /* Set text color to white */
+    border: 2px solid purple; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    display: inline-block; /* Make it an inline-block to wrap around the content */
+    transition: background-color 0.4s; /* Add a smooth transition for the background color */
+    cursor: pointer;
+}
+
+.large-box p:hover{
+    background-color: transparent;
+}
+
+.blurbg{
+    background-color: #bcd2dd;
+}
+
+/* Product image styles */
+.product-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    transform-origin: center center;
+}
+.product-image:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+/* Product name styles */
+.product-name {
+    font-weight: bold;
+    margin-top: 10px;
+    color:#000000;
+}
+
+/* Product price styles */
+.product-price {
+    color: #000000;
+    margin-top: 5px;
+}
+.product:last-child {
+    margin-right: 0;
+}
+
+/*Coices Section*/
+
+.choices-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the H4 element with a purple underline */
+.purple-text {
+    color: black;
+    text-decoration: underline purple;
+}
+
+/* Style the choice boxes */
+.choice-box {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top; /*Align boxes at the top*/
+}
+
+/* Style the rectangle boxes */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+}
+
+/* Style the text below the boxes */
+.choice-box p {
+    color: black;
+    font-size: 16px;
+}
+
+/* Style the new launches section */
+.new-launches {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the h3 element with a purple underline */
+.new-launches h3 {
+    color: purple;
+    text-decoration: underline;
+}
+
+/* Style the square boxes */
+.square-boxes {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20px; */
+}
+
+/* Style the large square boxes */
+.large-box {
+    width: 25%; /* Adjust the width as needed */
+    height: 20%; /* Adjust the height as needed */
+    margin: 50px;
+}
+
+/* Style the new banner section */
+.banner-section {
+    padding-top: 2%;
+}
+
+.Banner {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto;
+}
+
+.banner-text:hover {
+    color: rgb(255, 119, 255); /* Change to the desired color on hover */
+}
+
+/* Center align the video container */
+
+.video-section {
+    text-align: center;
+}
+
+.video-container {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5%;
+    width: 99.6%;
+    height: 0;
+}
+.video-container iframe{
+    width: 99.8%;
+}
+
+
+
+/* International Link */
+
+.international-link{
+    background-color: #ce46ff;
+    text-align: center;
+    padding: 30px;
+    transition: background-color 0.4s, color 0.4s; /* Apply transition to background-color and color */
+}
+.international-link .inter-text a{
+    text-decoration: none;
+    cursor: pointer;
+    color: yellow;
+}
+.international-link .inter-text a:hover{
+    text-decoration: underline #d8475f;
+    color: #620982ce;
+    transition: text-decoration 0.4s, color 0.4s; /* Apply transition to text-decoration and color on hover */
+
+}
