@@ -3,17 +3,63 @@
  body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    font-family: monospace;
 }
+/* Apply styles to the section elements */
+section {
+  padding: 20px; /* Add some padding for spacing */
+  text-align: center;
+}
+
+/* Increase the size of the section titles */
+section h2 {
+  font-size: 36px; /* Increase the font size */
+  font-family: 'Helvetica Neue', sans-serif; /* Use a modern font */
+  color: #333; /* Set the text color */
+  margin: 10px 0; /* Add spacing */
+}
+
+/* Style the paragraph text inside the section */
+section p {
+  font-size: 18px; /* Increase the font size */
+  font-family: 'Roboto', sans-serif; /* Use another modern font */
+  color: #666; /* Set the text color */
+  margin: 10px 0; /* Add spacing */
+}
+
+/* Increase the size of the special section */
+.special-section {
+  padding: 60px; /* Increase padding for more space */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Style the section title */
+.special-section h2 {
+  font-size: 44px; /* Increase the font size for the title */
+  font-family: 'Montserrat', sans-serif; /* Apply a unique font */
+  color: #ff6600; /* Set a custom text color */
+}
+
+/* Style the paragraph text inside the special section */
+.special-section p {
+  font-size: 36px; /* Increase the font size for the content */
+  font-family: 'Raleway', sans-serif; /* Use another unique font */
+  color: #666; /* Set the text color */
+  margin: 20px 0; /* Add spacing */
+}
+
+/* Remove background color and border */
+.special-section {
+  background-color: transparent;
+  border: none;
+}
+
+
+
 .blackt{
     color: #000000;
     font-weight: 700;
 }
-.content{
-    max-width: 92%;
-    margin: auto;
-    background-color: #f3f0ed;
-}
+
 
 .scroll-fade-in {
     opacity: 0;
@@ -35,80 +81,112 @@ body {
     background-color: #ffffff;
 }
 
-header {
-    background-color: #a389b1;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Apply a flex display to the header-container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 20px;
 }
 
-.logoo {
-    width: 75px;
-    height: auto;
-}
-.lgo {
-    width: 225px;
-    height: auto;
+/* Apply flex styles for the elements within the header */
+.header-container > * {
+  display: flex;
+  align-items: center;
 }
 
+/* Increase the logo size */
+.logo img {
+  width: 160px; /* Increase the width to make it bigger */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Increase the height of the search box */
 .search {
-    flex-grow: 1;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 70px; /* Set the desired height (e.g., 70px) */
 }
 
 .search input {
-    width: 90%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+  width: 90%; /* Increase the height to 70% */
+  height: 70%;
+  border: 2px solid black; /* Add a black border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  transition: border-color 0.3s, box-shadow 0.3s, color 0.3s; 
 }
 
-.search button {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.account{
-    margin-right: 15px;
-    margin-left: 15px;
-}
-.cart{
-    margin-left: 5px;
-}
-.cart a {
-    color: black;
-    text-decoration: none;
+
+/* Change the border and shadow on focus */
+.search input:focus {
+  border-color: #ce46ff; /* Change the border color on focus */
+  box-shadow: 0 0 10px rgba(206, 70, 255, 0.7); /* Change the shadow on focus */
+  color: #000000; /* Change the text color on focus */
 }
 
-.account a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Style the search button with 1% spacing */
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1%; /* 1% spacing to the search input */
+  
 }
+
+
+/* Increase the size of the search button icon */
+.search-button i {
+  font-size: 28px; /* Set the desired font size (e.g., 28px) */
+  color: #000; /* Set the icon color to black */
+  transition: color 0.3s; /* Add transition for color change on hover */
+}
+
+/* Change the icon color on hover */
+.search-button:hover i {
+  color: #ce46ff; /* Change the icon color on hover */
+}
+
+
+
+/* Change the search button color on hover */
+.search button:hover {
+  color: #ce46ff;
+}
+
+/* Increase spacing between profile and cart links */
+.account, .cart {
+  margin-left: 20px; /* Add 20px spacing between the links */
+}
+
+/* Style the account and cart links */
+.account a, .cart a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+/* Change the link color on hover */
+.account a:hover, .cart a:hover {
+  color: #ce46ff;
+}
+
+
+
+
+
 
 /* Navigation Menu Styles */
 nav {
-    background-color: #5b3358;
-    color: #ce46ff;
-    text-align: center; /* Center align the contents horizontally */
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
+
 
 .nav-links {
     list-style: none;
@@ -126,16 +204,23 @@ nav {
     transition: max-height 0.5s ease-in-out;
 }
 
-.nav-links li {
-    margin: 10px;
+nav .nav-links li {
+  display: inline;
+  margin: 0 30px; /* Add spacing between links */
 }
 
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    position: relative;
-    transition: color 0.3s; /* Add a color transition on hover */
+nav .nav-links a {
+  color: black; /* Set text color to black */
+  font-size: 18px; /* Increase font size */
+  text-decoration: none; /* Remove the default underline */
+  position: relative;
+  transition: color 0.3s, text-decoration 0.3s, box-shadow 0.3s; /* Add transitions */
+}
+
+nav .nav-links a:hover {
+  color: #ce46ff; /* Change color on hover */
+  text-decoration: underline; /* Add an underline on hover */
+  box-shadow: 0 2px 0 0 #ce46ff; /* Add a shadow on hover */
 }
 
 .nav-links a::before {
@@ -145,7 +230,7 @@ nav {
     bottom: 0;
     width: 0; /* Initially set the width to 0 */
     height: 2px; /* Set the height and style of the border */
-    background-color: #e7b248;
+    /* background-color: #e7b248; */
     transition: width 0.3s; /* Add a width transition on hover */
 }
 
@@ -275,7 +360,7 @@ nav {
 .best-sellers {
     text-align: center;
     margin: 0 auto;
-    width: 80%;
+    width: fit-content;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -317,6 +402,15 @@ nav {
     transition: background-color 0.4s; /* Add a smooth transition for the background color */
     cursor: pointer;
 }
+
+/* Define specific styles for the new product title */
+.product-title {
+  color: #333; /* Your desired color */
+  font-size: 16px; /* Your desired font size */
+  /* Add other styles as needed */
+}
+
+
 /* Remove the background color on hover */
 .product:hover .product-name,
 .product:hover .product-price {
@@ -357,7 +451,7 @@ nav {
 
 .choice-box p{
     padding: 5px 10px; /* Add some padding to create the box */
-    background-color: #00AFEF; /* Set the background color to purple */
+    background-color: #72878f; /* Set the background color to purple */
     color: white; /* Set text color to white */
     border: 2px solid purple; /* Add a border */
     border-radius: 5px; /* Add some border radius for rounded corners */
@@ -368,9 +462,14 @@ nav {
 .choice-box p:hover{
     background-color: transparent;
 }
+
+.Title{
+  color: #000;
+}
+
 .large-box p {
     padding: 5px 10px; /* Add some padding to create the box */
-    background-color: #00AFEF; /* Set the background color to purple */
+    background-color: #72878f; /* Set the background color to purple */
     color: black; /* Set text color to white */
     border: 2px solid purple; /* Add a border */
     border-radius: 5px; /* Add some border radius for rounded corners */
@@ -381,10 +480,6 @@ nav {
 
 .large-box p:hover{
     background-color: transparent;
-}
-
-.blurbg{
-    background-color: #bcd2dd;
 }
 
 /* Product image styles */
@@ -476,7 +571,7 @@ nav {
 
 /* Style the new banner section */
 .banner-section {
-    /* padding-top: 2%; */
+    padding-top: 2%;
 }
 
 .Banner {
