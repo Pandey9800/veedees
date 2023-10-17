@@ -133,6 +133,7 @@ body {
   border: none;
   cursor: pointer;
   margin-left: 1%; /* 1% spacing to the search input */
+  
 }
 
 
@@ -452,6 +453,8 @@ nav .nav-links a:hover {
 .choice-box p:hover{
     background-color: transparent;
 }
+
+
 .large-box p {
     padding: 5px 10px; /* Add some padding to create the box */
     background-color: #00AFEF; /* Set the background color to purple */
@@ -465,10 +468,6 @@ nav .nav-links a:hover {
 
 .large-box p:hover{
     background-color: transparent;
-}
-
-.blurbg{
-    background-color: #bcd2dd;
 }
 
 /* Product image styles */
