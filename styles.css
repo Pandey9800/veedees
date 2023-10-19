@@ -360,7 +360,7 @@ nav .nav-links a:hover {
 .best-sellers {
     text-align: center;
     margin: 0 auto;
-    width: 80%;
+    width: fit-content;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -402,6 +402,15 @@ nav .nav-links a:hover {
     transition: background-color 0.4s; /* Add a smooth transition for the background color */
     cursor: pointer;
 }
+
+/* Define specific styles for the new product title */
+.product-title {
+  color: #333; /* Your desired color */
+  font-size: 16px; /* Your desired font size */
+  /* Add other styles as needed */
+}
+
+
 /* Remove the background color on hover */
 .product:hover .product-name,
 .product:hover .product-price {
@@ -442,7 +451,7 @@ nav .nav-links a:hover {
 
 .choice-box p{
     padding: 5px 10px; /* Add some padding to create the box */
-    background-color: #00AFEF; /* Set the background color to purple */
+    background-color: #72878f; /* Set the background color to purple */
     color: white; /* Set text color to white */
     border: 2px solid purple; /* Add a border */
     border-radius: 5px; /* Add some border radius for rounded corners */
@@ -454,10 +463,13 @@ nav .nav-links a:hover {
     background-color: transparent;
 }
 
+.Title{
+  color: #000;
+}
 
 .large-box p {
     padding: 5px 10px; /* Add some padding to create the box */
-    background-color: #00AFEF; /* Set the background color to purple */
+    background-color: #72878f; /* Set the background color to purple */
     color: black; /* Set text color to white */
     border: 2px solid purple; /* Add a border */
     border-radius: 5px; /* Add some border radius for rounded corners */
